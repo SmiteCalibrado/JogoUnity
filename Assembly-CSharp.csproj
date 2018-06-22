@@ -59,6 +59,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BotaoP.cs" />
+    <Compile Include="Assets\Scripts\Botoes.cs" />
     <Compile Include="Assets\Scripts\Controlando.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Pichau/Documents/Projeto Mat/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
