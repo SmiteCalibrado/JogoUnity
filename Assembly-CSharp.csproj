@@ -59,9 +59,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BotaoB.cs" />
     <Compile Include="Assets\Scripts\BotaoP.cs" />
     <Compile Include="Assets\Scripts\Botoes.cs" />
+    <Compile Include="Assets\Scripts\CameraScale.cs" />
     <Compile Include="Assets\Scripts\Controlando.cs" />
+    <Compile Include="Assets\Scripts\Itens.cs" />
+    <Compile Include="Assets\Scripts\Loja.cs" />
+    <Compile Include="Assets\Scripts\Sistema Segundos.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Pichau/Documents/Projeto Mat/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
