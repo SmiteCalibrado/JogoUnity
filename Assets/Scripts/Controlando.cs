@@ -7,33 +7,32 @@ using UnityEngine.UI;
 public class Controlando : MonoBehaviour {
 
     //int e float
+    [Header("Os Bagulho Importante")]
     public static int Notas = 0;
     public static int Alunos = 40;
     public static int Dinheiro = 0;
+
+    [Header("O Que ninguem liga")]
     public static float Feliz = 0.05f;
     public static int QualiAula = 1;
     public static int QualiCantina = 1;
+    [Header("O Que ninguem liga Parte 2")]
     public static int QuantiProf = 1;
     public static float QualiQuadra = 1;
     public static float TempProf = 10.0f;
     public static float Felicidade = 1;
 
-    //textos
+    [Header("Textos")]
     public Text txtNotas;
     public Text txtDinheiro;
     public Text txtAlunos;
 
-    //botoes
-    public Button Aulas;
-    public Button Comida;
-    public Button Quadra;
-
-
-    //Imagens
+    [Header("Imagens")]
     public Image ImagemFeliz;
     public Image EfeitoTriste;
     public Image EfeitoCafe;
 
+    [Header("Menus")]
     public GameObject MenuCantina;
     public GameObject MenuAula;
     public GameObject MenuEdF;

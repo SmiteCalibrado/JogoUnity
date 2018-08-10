@@ -9,30 +9,19 @@ public abstract class Itens {
 
     public int Preco
     {
-        get
-        {
-            return preco;
-        }
-        set
-        {
-            preco = value;
-        }
+        get { return preco; }
+        set { preco = value; }
     }
 
     public int ItemNot
     {
-        get
-        {
-            return nota;
-        }
-        set
-        {
-            preco = nota;
-        }
+        get { return nota; }
+        set { nota = value; }
+        
     }
 
     public abstract void Executar();
 
-
+    public abstract void Atualizar();
    
 }

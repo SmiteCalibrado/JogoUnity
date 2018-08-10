@@ -8,9 +8,11 @@ public class Eventos : MonoBehaviour {
     float Otempo;
     float TempoMax = 1.0f;
 
+    [Header("Efeito Triste")]
     public Controlando control2;
-
     public Image EfeitoTriste;
+
+
 	// Use this for initialization
 	void Start () {
         control2 = new Controlando();
@@ -18,8 +20,12 @@ public class Eventos : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Controlando.Felicidade <= 0) {
+        if (Controlando.Felicidade <= 0)
+        {
             TirandoFelicidade();
+        }
+        else {
+            EfeitoTriste.enabled = false;
         }
 	}
 
