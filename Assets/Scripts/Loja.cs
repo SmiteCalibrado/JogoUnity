@@ -7,6 +7,7 @@ public class Loja : MonoBehaviour {
 
     Prova ItemProva = new Prova();
     Quadra ItemQuadra = new Quadra();
+    Cantina ItemCant = new Cantina();
    
     [Header("Item Prova")]
     public Text Precoprov;
@@ -17,6 +18,12 @@ public class Loja : MonoBehaviour {
     public Text Precoquadra;
     public Text Notaquadra;
     public Animator QuadraAnima;
+
+    [Header("Item Cantina")]
+    public Text PrecoCant;
+    public Text NotaCant;
+    public Animator CantiAnima;
+
     // Use this for initialization
     void Start () {
         		
@@ -34,6 +41,8 @@ public class Loja : MonoBehaviour {
        Notaprov.text = ItemProva.ItemNot.ToString();
        Precoquadra.text = ItemQuadra.Preco.ToString();
        Notaquadra.text = ItemQuadra.ItemNot.ToString();
+       PrecoCant.text = ItemCant.Preco.ToString();
+       NotaCant.text = ItemCant.ItemNot.ToString();
     }
     public void btnProva()
     {
@@ -55,15 +64,27 @@ public class Loja : MonoBehaviour {
 
     }
 
+    public void btnCantina()
+    {
+
+        if (Controlando.Dinheiro >= ItemProva.Preco && Controlando.Notas >= ItemProva.ItemNot)
+        {
+            ItemCant.Executar();
+            Controlando.Dinheiro = Controlando.Dinheiro - ItemCant.Preco;
+        }
+
+
+    }
+
     public void AtualizarAnimacao()
     {
         if (Controlando.Dinheiro >= ItemProva.Preco && Controlando.Notas >= ItemProva.ItemNot)
         {
-            Provaanima.SetBool("Trancado", true);
+            Provaanima.SetBool("Trancado", false);
 
         }
         else {
-            Provaanima.SetBool("Trancado",false);
+            Provaanima.SetBool("Trancado",true);
         }
 
         if (Controlando.Dinheiro >= ItemQuadra.Preco && Controlando.Notas >= ItemQuadra.ItemNot)
@@ -75,6 +96,22 @@ public class Loja : MonoBehaviour {
         {
             QuadraAnima.SetBool("Trancado", true);
         }
-    }    
+
+        if (Controlando.Dinheiro >= ItemQuadra.Preco && Controlando.Notas >= ItemQuadra.ItemNot)
+        {
+           CantiAnima.SetBool("Trancado", false);
+
+        }
+        else
+        {
+            CantiAnima.SetBool("Trancado", true);
+        }
+    }
+
+    public void ControtatouProf()
+    {
+
+
+    }
 
 }

@@ -7,7 +7,7 @@ public class Quadra :Itens {
     public Quadra()
     {
         Preco = 35;
-        nota = 100;
+        ItemNot = 100;
 
     }
 

@@ -69,6 +69,8 @@
     <Compile Include="Assets\Scripts\Controlando.cs" />
     <Compile Include="Assets\Scripts\Eventos.cs" />
     <Compile Include="Assets\Scripts\Itens.cs" />
+    <Compile Include="Assets\Scripts\Itens\Cantina.cs" />
+    <Compile Include="Assets\Scripts\Itens\Professores.cs" />
     <Compile Include="Assets\Scripts\Itens\Prova.cs" />
     <Compile Include="Assets\Scripts\Itens\Quadra.cs" />
     <Compile Include="Assets\Scripts\Loja.cs" />
