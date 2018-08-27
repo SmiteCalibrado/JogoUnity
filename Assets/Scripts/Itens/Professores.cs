@@ -7,7 +7,8 @@ public class Professores : Itens {
 
     public Professores()
     {
-
+        Preco = 5;
+        ItemNot = 4; 
     }
 
     public override void Atualizar()
@@ -18,7 +19,7 @@ public class Professores : Itens {
 
     public override void Executar()
     {
-        Controlando.QuantiProf++;
+        Controlando.QuantiProfs.Add(1); // duvida 1
         Atualizar();
     }
 }

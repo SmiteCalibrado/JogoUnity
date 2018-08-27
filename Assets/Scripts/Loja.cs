@@ -8,6 +8,7 @@ public class Loja : MonoBehaviour {
     Prova ItemProva = new Prova();
     Quadra ItemQuadra = new Quadra();
     Cantina ItemCant = new Cantina();
+    Professores ItemProf = new Professores();
    
     [Header("Item Prova")]
     public Text Precoprov;
@@ -24,6 +25,11 @@ public class Loja : MonoBehaviour {
     public Text NotaCant;
     public Animator CantiAnima;
 
+    [Header("Item Professores")]
+    public Text PrecoProf;
+    public Text NotaProf;
+    public Animator ProfAnima;
+
     // Use this for initialization
     void Start () {
         		
@@ -39,10 +45,16 @@ public class Loja : MonoBehaviour {
         //Sistema de texto 
        Precoprov.text = ItemProva.Preco.ToString();
        Notaprov.text = ItemProva.ItemNot.ToString();
+
        Precoquadra.text = ItemQuadra.Preco.ToString();
        Notaquadra.text = ItemQuadra.ItemNot.ToString();
+
        PrecoCant.text = ItemCant.Preco.ToString();
        NotaCant.text = ItemCant.ItemNot.ToString();
+
+        PrecoProf.text = ItemProf.Preco.ToString();
+        NotaProf.text = ItemProf.ItemNot.ToString();
+
     }
     public void btnProva()
     {
@@ -73,7 +85,16 @@ public class Loja : MonoBehaviour {
             Controlando.Dinheiro = Controlando.Dinheiro - ItemCant.Preco;
         }
 
-
+    }
+    public void ContratarProfs()
+    {
+        if (Controlando.Dinheiro >= ItemProf.Preco && Controlando.Notas >= ItemProf.ItemNot)
+        {
+            ItemCant.Executar();
+            Debug.Log("parte dois funcionou");
+            InvokeRepeating("Profs", 1, 10);
+            Controlando.Dinheiro = Controlando.Dinheiro - ItemProf.Preco;
+        }
     }
 
     public void AtualizarAnimacao()
@@ -106,11 +127,23 @@ public class Loja : MonoBehaviour {
         {
             CantiAnima.SetBool("Trancado", true);
         }
+        if (Controlando.Dinheiro >= ItemProf.Preco && Controlando.Notas >= ItemProf.ItemNot)
+        {
+           ProfAnima.SetBool("Trancado", false);
+
+        }
+        else
+        {
+            ProfAnima.SetBool("Trancado", true);
+        }
     }
 
-    public void ControtatouProf()
+    public void Profs()
     {
-
+        foreach (int prof in Controlando.QuantiProfs )
+        {
+            Controlando.Notas++;            // duvida 2
+        }
 
     }
 

@@ -17,7 +17,7 @@ public class Controlando : MonoBehaviour {
     public static int QualiAula = 1;
     public static int QualiCantina = 1;
     [Header("O Que ninguem liga Parte 2")]
-    public static int QuantiProf = 1;
+    public static List<int> QuantiProfs;    
     public static float QualiQuadra = 1;
     public static float TempProf = 10.0f;
     public static float Felicidade = 1;
@@ -42,8 +42,8 @@ public class Controlando : MonoBehaviour {
     public GameObject MenuEventos;
    
     // Use this for initialization
-    void Start() {
-        MenuCantina.SetActive(false);
+    void Start() {     
+        MenuCantina.SetActive(false);      
         MenuAula.SetActive(true);
         Hud.SetActive(true);
         Loja.SetActive(false);
